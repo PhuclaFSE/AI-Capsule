@@ -4,7 +4,7 @@
 
 AI Capsule is a full-stack web application that helps users build a searchable-by-review *personal collection* of prompts and the results they produce. Users sign in with GitHub, manage their prompt records, and track whether a prompt has been reviewed or improved. Each user's library is isolated through server-side authentication and record ownership checks.
 
-**Live application:** [AI Capsule on Render](https://ai-capsule-wocy.onrender.com/)
+**Live application:** Render
 
 > **Deployment note:** The app uses SQLite on a Render service filesystem. Data may be lost when the service restarts or redeploys if persistent storage is not configured. The public deployment may also take time to wake up.
 
