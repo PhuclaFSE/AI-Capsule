@@ -1,0 +1,36 @@
+{
+  "name": "ai-capsule",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI Capsule - Cloud-deployed AI prompt manager for CSE3CWA/CSE5006 Assignment 3",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "nodemon server/index.js",
+    "dev:client": "vite --config vite.config.js",
+    "build": "vite build --config vite.config.js",
+    "start": "node server/index.js",
+    "check": "node --check server/index.js && node --check server/app.js && node --check server/db.js && node --check server/middleware/auth.js && node --check server/routes/auth.js && node --check server/routes/capsules.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "vite": "^6.0.7"
+  }
+}
